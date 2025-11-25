@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MSC STUDY - Learn Music with Passion</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" href="img/Sin título (1).ico">
+</head>
+
+<body>
+  <!-- Fondo -->
+  <div class="background-image">
+    <img src="img/gvz-42-RyoPLIFEI7c-unsplash.jpg" alt="MSC STUDY Background">
+  </div>
+
+  <!-- NAV -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-line1">MSC</span>
+        <span class="logo-line2">STUDY</span>
+      </div>
+
+      <div class="nav-menu">
+        <a href="#" class="nav-link active" data-translate="menuHome">Inicio</a>
+        <a href="#" class="nav-link" data-translate="menuCourses">Cursos</a>
+        <a href="#" class="nav-link" data-translate="menuHistory">Historia de la Música</a>
+        <a href="#" class="nav-link" data-translate="menuTheory">Teoría Musical</a>
+      </div>
+
+      <div class="nav-search">
+        <div class="search-container">
+          <i class="fas fa-search search-icon"></i>
+          <input type="text" class="search-input" data-translate-placeholder="searchPlaceholder"
+            placeholder="Buscar cursos...">
+        </div>
+      </div>
+
+      <div class="nav-auth">
+        <button class="auth-btn login-btn" data-translate="btnLogin">Iniciar Sesión</button>
+        <button class="auth-btn signup-btn" data-translate="btnSignup">Crear Cuenta</button>
+      </div>
+</div>
+
+
+      <!-- Selector de idioma -->
+      <div class="languaje">
+        <div class="languaje-selected">
+          <span class="flag" style="background-image: url('https://flagsapi.com/ES/flat/64.png');"></span>
+        </div>
+        <ul>
+          <li data-flag="https://flagsapi.com/ES/flat/64.png" data-lang="es">
+            <a href="#"><span class="flag"
+                style="background-image: url('https://flagsapi.com/ES/flat/64.png');"></span>Español</a>
+          </li>
+          <li data-flag="https://flagsapi.com/GB/flat/64.png" data-lang="en">
+            <a href="#"><span class="flag"
+                style="background-image: url('https://flagsapi.com/GB/flat/64.png');"></span>English</a>
+          </li>
+          <li data-flag="https://flagsapi.com/BR/flat/64.png" data-lang="pt">
+            <a href="#"><span class="flag"
+                style="background-image: url('https://flagsapi.com/BR/flat/64.png');"></span>Português</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+  
+
+  <div class="container">
+    <main class="main-content">
+      <h1 class="main-title" data-translate="title">
+        Bienvenido a MSC STUDY, el lugar donde aprender música se convierte en una experiencia única
+      </h1>
+
+      <p class="main-description" data-translate="description">
+        Explora clases interactivas, conoce la historia de la música y descubre cómo cada nota puede transformar tu forma
+        de sentir y expresarte. ¡Empieza hoy tu viaje musical con nosotros!
+      </p>
+
+      <button class="cta-button" data-translate="btnStart">Comenzar Ahora</button>
+
+      <section class="courses-section">
+        <h2 class="section-title" data-translate="coursesTitle">Cursos Populares</h2>
+        <div class="courses-grid">
+          <div class="course-card">
+            <h3 data-translate="course1">Instrumentos</h3>
+          </div>
+          <div class="course-card">
+            <h3 data-translate="course2">Teoría Musical</h3>
+          </div>
+          <div class="course-card">
+            <h3 data-translate="course3">Entrenamiento Vocal</h3>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const lang = document.querySelector(".languaje");
+      const dropdown = lang.querySelector("ul");
+      const selected = lang.querySelector(".languaje-selected");
+
+      // Traducciones
+      const translations = {
+        es: {
+          menuHome: "Inicio",
+          menuCourses: "Cursos",
+          menuHistory: "Historia de la Música",
+          menuTheory: "Teoría Musical",
+          searchPlaceholder: "Buscar cursos...",
+          btnLogin: "Iniciar Sesión",
+          btnSignup: "Crear Cuenta",
+          title: "Bienvenido a MSC STUDY, el lugar donde aprender música se convierte en una experiencia única",
+          description: "Explora clases interactivas, conoce la historia de la música y descubre cómo cada nota puede transformar tu forma de sentir y expresarte. ¡Empieza hoy tu viaje musical con nosotros!",
+          btnStart: "Comenzar Ahora",
+          coursesTitle: "Cursos Populares",
+          course1: "Instrumentos",
+          course2: "Teoría Musical",
+          course3: "Entrenamiento Vocal"
+        },
+        en: {
+          menuHome: "Home",
+          menuCourses: "Courses",
+          menuHistory: "Music History",
+          menuTheory: "Music Theory",
+          searchPlaceholder: "Search courses...",
+          btnLogin: "Login",
+          btnSignup: "Sign Up",
+          title: "Welcome to MSC STUDY, where learning music becomes a unique experience",
+          description: "Explore interactive lessons, learn about music history, and discover how every note can transform the way you feel and express yourself. Start your musical journey with us today!",
+          btnStart: "Start Now",
+          coursesTitle: "Popular Courses",
+          course1: "Instruments",
+          course2: "Music Theory",
+          course3: "Vocal Training"
+        },
+        pt: {
+          menuHome: "Início",
+          menuCourses: "Cursos",
+          menuHistory: "História da Música",
+          menuTheory: "Teoria Musical",
+          searchPlaceholder: "Procurar cursos...",
+          btnLogin: "Entrar",
+          btnSignup: "Criar Conta",
+          title: "Bem-vindo ao MSC STUDY, onde aprender música se torna uma experiência única",
+          description: "Explore aulas interativas, conheça a história da música e descubra como cada nota pode transformar sua forma de sentir e se expressar. Comece sua jornada musical hoje!",
+          btnStart: "Começar Agora",
+          coursesTitle: "Cursos Populares",
+          course1: "Instrumentos",
+          course2: "Teoria Musical",
+          course3: "Treinamento Vocal"
+        }
+      };
+
+      // Mostrar / ocultar menú
+      selected.addEventListener("click", (e) => {
+        e.stopPropagation();
+        dropdown.classList.toggle("show");
+      });
+
+      document.addEventListener("click", () => {
+        dropdown.classList.remove("show");
+      });
+
+      // Cambiar idioma
+      lang.querySelectorAll("li").forEach((item) => {
+        item.addEventListener("click", (e) => {
+          e.preventDefault();
+          const flagUrl = item.getAttribute("data-flag");
+          const selectedLang = item.getAttribute("data-lang");
+
+          selected.innerHTML = `<span class="flag" style="background-image: url('${flagUrl}');"></span>`;
+          dropdown.classList.remove("show");
+
+          document.querySelectorAll("[data-translate]").forEach((el) => {
+            const key = el.getAttribute("data-translate");
+            el.textContent = translations[selectedLang][key];
+          });
+
+          // Cambiar placeholder
+          document.querySelectorAll("[data-translate-placeholder]").forEach((el) => {
+            const key = el.getAttribute("data-translate-placeholder");
+            el.placeholder = translations[selectedLang][key];
+          });
+        });
+      });
+    });
+  </script>
+  
+  <!-- Modal de Login -->
+<!-- Modal de Login -->
+<div class="wrapper" id="loginModal" style="display: none;">
+  <div class="login-box">
+    <span class="close-login">&times;</span>
+    <h2>Iniciar Sesión</h2>
+    <form id="loginForm">
+      <div class="input-group">
+        <i class="fas fa-envelope icon"></i>
+        <input type="email" id="email" name="email" required>
+        <label for="email">Email</label>
+      </div>
+      
+      <div class="input-group">
+        <i class="fas fa-lock icon"></i>
+        <input type="password" id="password" name="password" required>
+        <label for="password">Contraseña</label>
+      </div>
+      
+      <div class="extras">
+        <label>
+          <input type="checkbox" id="remember" name="remember"> 
+          Recuérdame
+        </label>
+        <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+      </div>
+      
+      <button class="btn-login" type="submit">Entrar</button>
+      
+      <div class="form-message" id="formMessage"></div>
+      
+      <p class="register-text">
+        ¿No tienes cuenta? <a href="#" class="register-link">Regístrate</a>
+      </p>
+    </form>
+  </div>
+</div>
+
+
+
+
+
+      <script src="script.js"></script>
+      <script  type = "module"  src = " https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js " > </script>  
+  <script nomodule src = " https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js " >   </script>
+
+  
+  
+</body>
+
+</html>
